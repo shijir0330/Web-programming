@@ -1,0 +1,25 @@
+.notMonth {
+    background: white;
+    color: lightgray;
+}
+
+.CurrentMonth {
+    background: white;
+    cursor: pointer;
+}
+
+.Month {
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.left, .right{
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+table, th, td {
+    text-align: center;
+    background: lightgray;
+}

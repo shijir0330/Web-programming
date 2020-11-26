@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div id="container">
+	</div>
+
+	<script type="text/javascript">
+		var x = document.getElementById("container");
+		var y = document.createElement("p");
+		x.appendChild(y);
+		y.setAttribute("class", "pClass");
+		y.innerHTML = "My paragraph";
+
+		var z = document.createElement("SPAN");
+		x.appendChild(z);
+		z.setAttribute("class", "mySpan");
+		z.innerHTML = "My span.";
+		z.style.visibility = "hidden";
+	</script>
+</body>
+</html>

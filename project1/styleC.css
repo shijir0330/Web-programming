@@ -1,0 +1,48 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 2000px;
+	height: 700px;
+}
+.parent {
+	margin-top: 10px;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.child {
+	width: 100px;
+	height: 150px;
+	background-color: #eeeff2;
+	border-left: 10px dotted #897694;
+	margin: 0 auto;
+	display: inline-block;
+	animation-name: animation;
+  	animation-duration: 5s;
+}
+
+p {
+	/*web fonts*/
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 70px;
+	color: white;
+	/*Shadows*/
+  	text-shadow: 1px 1px 2px red, 0 0 5px yellow;
+}
+
+.child:hover {
+	/*gradients*/
+	background-image: linear-gradient(red, yellow);
+	/*transitions*/
+	transition: height 3s;
+	height: 700px;
+}
+
+/*animation*/
+@keyframes animation {
+  from {background-color: #897694;}
+  to {background-color: #eeeff2;}
+}
