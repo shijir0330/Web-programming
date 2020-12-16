@@ -1,0 +1,10 @@
+.cs142-topbar-appBar {
+  height: 60;
+  justify-content: 'center';
+}
+.right {
+  float: right;
+}
+.cs142-topbar-appBar > div {
+  justify-content: space-between;
+}

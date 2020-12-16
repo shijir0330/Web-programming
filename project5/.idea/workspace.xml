@@ -19,25 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1f79066-999f-4e83-afd3-795111c59be8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/topBar/TopBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/topBar/TopBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/topBar/TopBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/topBar/TopBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/userDetail/userDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/userDetail/userDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/userDetail/userDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/userDetail/userDetail.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/userList/userList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/userList/userList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/userPhotos/userPhotos.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/userPhotos/userPhotos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/userPhotos/userPhotos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/userPhotos/userPhotos.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photoShare.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/photoShare.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="f1f79066-999f-4e83-afd3-795111c59be8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -57,8 +46,14 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\work\IntelliJ IDEA 2020.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\2020 FALL lessons\Web-programming\project5" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -73,8 +68,17 @@
       <workItem from="1606631721865" duration="25000" />
       <workItem from="1608028651129" duration="11319000" />
       <workItem from="1608083618082" duration="9169000" />
-      <workItem from="1608110825779" duration="3430000" />
+      <workItem from="1608110825779" duration="3708000" />
+      <workItem from="1608115611068" duration="1151000" />
     </task>
+    <task id="LOCAL-00001" summary="lab 5 done">
+      <created>1608114375028</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608114375028</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,10 +96,22 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lab 5 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab 5 done" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="905" y="118" key="RollbackChangesDialog" timestamp="1608108077987">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="905" y="118" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608108077987" />
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1608114551436">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608114551436" />
+    <state x="536" y="146" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1608115788907">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="536" y="146" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824@0.0.1536.824" timestamp="1608115788907" />
   </component>
 </project>
