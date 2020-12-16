@@ -1,50 +1,58 @@
 import React from 'react';
 import {
-  Divider,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
+    Divider,
+    List,
+    ListItem,
+    ListItemText,
+    Typography,
 }
-from '@material-ui/core';
+    from '@material-ui/core';
 import './userList.css';
+// import fetchModel from "../../lib/fetchModelData";
 
 /**
  * Define UserList, a React componment of CS142 project #5
  */
 class UserList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            users: []
+        }
+        // this.users = window.cs142models.userListModel();
+        // this.users = [];
+        // console.log(this.users)
+        // this.ListItemLink = this.ListItemLink.bind(this);
+    }
 
-  render() {
-    return (
-      <div>
-        <Typography variant="body1">
-          This is the user list, which takes up 3/12 of the window.
-          You might choose to use <a href="https://material-ui.com/demos/lists/">Lists</a> and <a href="https://material-ui.com/demos/dividers">Dividers</a> to
-          display your users like so:
-        </Typography>
-        <List component="nav">
-          <ListItem>
-            <ListItemText primary="Item #1" />
-          </ListItem>
-          <Divider />
-          <ListItem>
-            <ListItemText primary="Item #2" />
-          </ListItem>
-          <Divider />
-          <ListItem>
-            <ListItemText primary="Item #3" />
-          </ListItem>
-          <Divider />
-        </List>
-        <Typography variant="body1">
-          The model comes in from window.cs142models.userListModel()
-        </Typography>
-      </div>
-    );
-  }
+    componentDidMount() {
+        fetch('/user/list').then(response => response.json()).then(data => {
+            this.setState({
+                users: data
+            })
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <Typography variant="body1">
+                    Users
+                </Typography>
+                <List component="nav">
+                    {this.state.users.map((user, index) => (
+                        <div key={user._id}>
+                            <ListItem button component="a" href={'/photo-share.html#/users/' + user._id}>
+                                <ListItemText primary={index + 1 + '. ' + user.first_name + ' ' + user.last_name}/>
+                            </ListItem>
+                            <Divider/>
+                        </div>
+                    ))}
+                </List>
+            </div>
+
+        );
+    }
 }
 
 export default UserList;
