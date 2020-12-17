@@ -21,11 +21,6 @@ class UserList extends React.Component {
         this.state = {
             users: []
         }
-        // this.users = window.cs142models.userListModel();
-        // this.users = [];
-        // console.log(this.users)
-        // this.ListItemLink = this.ListItemLink.bind(this);
-        this.getPhotoCount = this.getPhotoCount.bind(this);
     }
 
     componentDidMount() {
