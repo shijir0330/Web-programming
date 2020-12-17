@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import {
     Typography
 } from '@material-ui/core';
@@ -17,13 +18,13 @@ class UserPhotos extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`/photosOfUser/${this.props.match.params.userId}`).then(response => response.json()).then(data => {
+        axios.get(`/photosOfUser/${this.props.match.params.userId}`).then(res => {
             this.setState({
-                infos: data
+                infos: res.data
             })
         });
-        fetch(`/user/${this.props.match.params.userId}`).then(response => response.json()).then(data => {
-            this.props.setData("Photos of " + data.first_name)
+        axios.get(`/user/${this.props.match.params.userId}`).then(res => {
+            this.props.setData("Photos of " + res.data.first_name)
         });
     }
 

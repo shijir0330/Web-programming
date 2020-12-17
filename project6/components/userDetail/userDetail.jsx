@@ -3,6 +3,7 @@ import {
     Typography
 } from '@material-ui/core';
 import './userDetail.css';
+import axios from "axios";
 
 
 /**
@@ -17,23 +18,22 @@ class UserDetail extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`/user/${this.props.match.params.userId}`).then(response => response.json()).then(data => {
+        axios.get(`/user/${this.props.match.params.userId}`).then(res => {
             this.setState({
-                user: data
+                user: res.data
             })
-            // this.props.title = data.first_name;
-            this.props.setData(data.first_name)
+            this.props.setData(res.data.first_name)
         });
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.userId !== this.props.match.params.userId) {
-            fetch(`/user/${this.props.match.params.userId}`).then(response => response.json()).then(data => {
+            axios.get(`/user/${this.props.match.params.userId}`).then(res => {
                 this.setState({
-                    user: data
+                    user: res.data
                 })
                 // this.props.title = data.first_name;
-                this.props.setData(data.first_name)
+                this.props.setData(res.data.first_name)
             });
         }
     }
