@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1f79066-999f-4e83-afd3-795111c59be8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compiled/photoShare.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/compiled/photoShare.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/userPhotos/userPhotos.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/userPhotos/userPhotos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/userPhotos/userPhotos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/userPhotos/userPhotos.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/webServer.js" afterDir="false" />
-    </list>
+    <list default="true" id="f1f79066-999f-4e83-afd3-795111c59be8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +74,7 @@
       <workItem from="1608171164417" duration="4208000" />
       <workItem from="1608213007975" duration="333000" />
       <workItem from="1608214108210" duration="3324000" />
+      <workItem from="1608218241927" duration="131000" />
     </task>
     <task id="LOCAL-00001" summary="lab 5 done">
       <created>1608114375028</created>
@@ -124,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608175434300</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="npm run lint passed">
+      <created>1608218352631</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608218352631</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,17 +147,18 @@
     <MESSAGE value="lab 5 done" />
     <MESSAGE value="hey" />
     <MESSAGE value="lab 6 test passed" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab 6 test passed" />
+    <MESSAGE value="npm run lint passed" />
+    <option name="LAST_COMMIT_MESSAGE" value="npm run lint passed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="905" y="118" key="RollbackChangesDialog" timestamp="1608108077987">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="905" y="118" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608108077987" />
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1608175436673">
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2" timestamp="1608218356770">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608175436673" />
+    <state x="722" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608218356770" />
     <state x="919" y="146" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1608115582202">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
