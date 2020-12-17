@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-  HashRouter, Route, Switch
+    HashRouter, Route, Switch, Redirect
 } from 'react-router-dom';
 import {
-  Grid, Paper
+    Grid, Paper
 } from '@material-ui/core';
 import './styles/main.css';
 
@@ -13,58 +13,88 @@ import TopBar from './components/topBar/TopBar';
 import UserDetail from './components/userDetail/UserDetail';
 import UserList from './components/userList/UserList';
 import UserPhotos from './components/userPhotos/UserPhotos';
+import LoginRegister from "./components/loginRegister/LoginRegister";
 
 class PhotoShare extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: "",
+    constructor(props) {
+        super(props);
+        this.state = {
+            userName: "",
+            title: "",
+            userIsLoggedIn: false
+        }
+        this.changeTitle = this.changeTitle.bind(this);
     }
-    this.changeTitle = this.changeTitle.bind(this);
-  }
 
-  changeTitle = (title) => {
-    this.setState({
-      title: title
-    })
-  };
+    changeTitle = (title) => {
+        this.setState({
+            title: title
+        })
+    };
 
-  render() {
-    return (
-      <HashRouter>
-      <div>
-      <Grid container spacing={8}>
-        <Grid item xs={12}>
-          <TopBar title={this.state.title}/>
-        </Grid>
-        <div className="cs142-main-topbar-buffer"/>
-        <Grid item sm={3}>
-          <Paper  className="cs142-main-grid-item">
-            <UserList />
-          </Paper>
-        </Grid>
-        <Grid item sm={9}>
-          <Paper className="cs142-main-grid-item">
-            <Switch>
-              <Route path="/users/:userId"
-                render={ props => <UserDetail {...props} setData={this.changeTitle} /> }
-              />
-              <Route path="/photos/:userId"
-                render ={ props => <UserPhotos {...props} setData={this.changeTitle} /> }
-              />
-              <Route path="/users" component={UserList} setData={this.changeTitle} />
-            </Switch>
-          </Paper>
-        </Grid>
-      </Grid>
-      </div>
-    </HashRouter>
-    );
-  }
+    changeUserName = (firstName, boolean) => {
+        this.setState({
+            userName: "Hi "+firstName,
+            userIsLoggedIn: boolean
+        })
+    };
+
+    render() {
+        return (
+            <HashRouter>
+                <div>
+                    <Grid container spacing={8}>
+                        <Grid item xs={12}>
+                            <TopBar title={this.state.title}
+                                    userName={this.state.userIsLoggedIn ? this.state.userName : "Please Login"}/>
+                        </Grid>
+                        <div className="cs142-main-topbar-buffer"/>
+                        <Grid item sm={3}>
+                            <Paper className="cs142-main-grid-item">
+                                <UserList/>
+                            </Paper>
+                        </Grid>
+                        <Grid item sm={9}>
+                            <Paper className="cs142-main-grid-item">
+                                <Switch>
+                                    <Redirect exact from="/" to="/login-register"/>
+                                    <Route path="/login-register"
+                                           render={props => <LoginRegister {...props} setData={this.changeUserName}/>}
+                                    />
+                                    {
+                                        this.state.userIsLoggedIn ?
+                                            <Route path="/users/:userId"
+                                                   render={props => <UserDetail {...props} setData={this.changeTitle}/>}
+                                            />
+                                            :
+                                            <Redirect path="/users/:userId" to="/login-register"/>
+                                    }
+                                    {
+                                        this.state.userIsLoggedIn ?
+                                            <Route path="/photos/:userId"
+                                                   render={props => <UserPhotos {...props} setData={this.changeTitle}/>}
+                                            />
+                                            :
+                                            <Redirect path="/photos/:userId" to="/login-register"/>
+                                    }
+                                    {
+                                        this.state.userIsLoggedIn ?
+                                            <Route path="/users" component={UserList} setData={this.changeTitle}/>
+                                            :
+                                            <Redirect path="/users" to="/login-register"/>
+                                    }
+                                </Switch>
+                            </Paper>
+                        </Grid>
+                    </Grid>
+                </div>
+            </HashRouter>
+        );
+    }
 }
 
 
 ReactDOM.render(
-  <PhotoShare />,
-  document.getElementById('photoshareapp'),
+    <PhotoShare/>,
+    document.getElementById('photoshareapp'),
 );

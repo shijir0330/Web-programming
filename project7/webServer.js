@@ -41,6 +41,10 @@ var User = require('./schema/user.js');
 var Photo = require('./schema/photo.js');
 var SchemaInfo = require('./schema/schemaInfo.js');
 
+var session = require('express-session');
+var bodyParser = require('body-parser');
+var multer = require('multer');
+
 var express = require('express');
 var app = express();
 
@@ -52,7 +56,8 @@ mongoose.connect('mongodb://localhost/cs142project6', {useNewUrlParser: true, us
 // We have the express static module (http://expressjs.com/en/starter/static-files.html) do all
 // the work for us.
 app.use(express.static(__dirname));
-
+app.use(session({secret: 'secretKey', resave: false, saveUninitialized: false}));
+app.use(bodyParser.json());
 
 app.get('/', function (request, response) {
     response.send('Simple web server of files from ' + __dirname);
@@ -125,6 +130,32 @@ app.get('/test/:p1', function (request, response) {
         response.status(400).send('Bad param ' + param);
     }
 });
+
+/*
+ * URL /admin/login
+ */
+app.post('/admin/login', function (request, response) {
+    const name = request.body.login_name
+    console.log(name)
+    User.findOne({first_name: name}, (err, user) => {
+        if (err) {
+            console.log('Login with user name: ' + name + ' not found.');
+            response.status(400).send('Not found');
+            return;
+        }
+        const {_id, first_name, last_name} = user;
+        const res = {_id, first_name, last_name};
+        response.status(200).send(res);
+    });
+    response.status(200).send(name);
+})
+
+/*
+ * URL /admin/login
+ */
+app.post('/admin/logout', function (request, response) {
+
+})
 
 /*
  * URL /user/list - Return all the User object.

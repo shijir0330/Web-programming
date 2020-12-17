@@ -20,12 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f79066-999f-4e83-afd3-795111c59be8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/loginRegister/LoginRegister.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/loginRegister/LoginRegister.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../project6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project6/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compiled/photoShare.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/compiled/photoShare.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/topBar/TopBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/topBar/TopBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/userList/userList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/userList/userList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photoShare.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/photoShare.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/webServer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -49,6 +66,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\work\IntelliJ IDEA 2020.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
@@ -74,7 +92,7 @@
       <workItem from="1608115298073" duration="20108000" />
       <workItem from="1608168079352" duration="3021000" />
       <workItem from="1608171164417" duration="3458000" />
-      <workItem from="1608175253341" duration="62000" />
+      <workItem from="1608175253341" duration="7451000" />
     </task>
     <task id="LOCAL-00001" summary="lab 5 done">
       <created>1608114375028</created>
@@ -118,7 +136,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lab 5 done" />
     <MESSAGE value="hey" />
-    <option name="LAST_COMMIT_MESSAGE" value="hey" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="905" y="118" key="RollbackChangesDialog" timestamp="1608108077987">

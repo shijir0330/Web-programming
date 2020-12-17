@@ -25,20 +25,20 @@ class UserList extends React.Component {
 
     componentDidMount() {
         axios.get('/user/list').then(res => {
-            var users_ = res.data.map(value => {
-                var photo_count = 0;
-                axios.get(`/photosOfUser/${value._id}`).then(comment => {
-                    photo_count = comment.data.length
-                }).catch();
-                return {
-                    _id: value._id,
-                    first_name: value.first_name,
-                    last_name: value.last_name,
-                    photo_count: photo_count
-                }
-            })
+            // var users_ = res.data.map(value => {
+            //     var photo_count = 0;
+            //     axios.get(`/photosOfUser/${value._id}`).then(comment => {
+            //         photo_count = comment.data.length
+            //     }).catch();
+            //     return {
+            //         _id: value._id,
+            //         first_name: value.first_name,
+            //         last_name: value.last_name,
+            //         photo_count: photo_count
+            //     }
+            // })
             this.setState({
-                users: users_
+                users: res.data
             })
         });
     }
