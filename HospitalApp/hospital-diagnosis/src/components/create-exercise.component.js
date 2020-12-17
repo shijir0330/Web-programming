@@ -7,18 +7,18 @@ export default class CreateExercise extends Component {
   constructor(props) {
     super(props);
 
-    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangePatientname = this.onChangePatientname.bind(this);
+    this.onChangeDiagnosis = this.onChangeDiagnosis.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
-    this.onChangeDuration = this.onChangeDuration.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      username: '',
+      patientname: '',
+      diagnosis: '',
       description: '',
-      duration: 0,
       date: new Date(),
-      users: []
+      patients: []
     }
   }
 
@@ -27,32 +27,31 @@ export default class CreateExercise extends Component {
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
-            users: response.data.map(user => user.username),
-            username: response.data[0].username
+            patients: response.data.map(patient => patient.username),
+            patientname: response.data[0].patientname
           })
         }
       })
       .catch((error) => {
         console.log(error);
       })
-
   }
 
-  onChangeUsername(e) {
+  onChangePatientname(e) {
     this.setState({
-      username: e.target.value
+      patientname: e.target.value
+    })
+  }
+
+  onChangeDiagnosis(e) {
+    this.setState({
+      diagnosis: e.target.value
     })
   }
 
   onChangeDescription(e) {
     this.setState({
       description: e.target.value
-    })
-  }
-
-  onChangeDuration(e) {
-    this.setState({
-      duration: e.target.value
     })
   }
 
@@ -65,59 +64,59 @@ export default class CreateExercise extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const exercise = {
-      username: this.state.username,
+    const diagnosis = {
+      patientname: this.state.patientname,
+      diagnosis: this.state.diagnosis,
       description: this.state.description,
-      duration: this.state.duration,
       date: this.state.date
     }
 
-    console.log(exercise);
+    console.log(diagnosis);
 
-    axios.post('http://localhost:5000/exercises/add', exercise)
+    axios.post('http://localhost:5000/exercises/add', diagnosis)
       .then(res => console.log(res.data));
 
-    window.location = '/';
+    window.location = '/diagnosis';
   }
 
   render() {
     return (
     <div>
-      <h3>Create New Exercise Log</h3>
+      <h3>Create Diagnosis</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
-          <label>Username: </label>
-          <select ref="userInput"
+          <label>Patient Name: </label>
+          <select 
               required
               className="form-control"
-              value={this.state.username}
-              onChange={this.onChangeUsername}>
+              value={this.state.patientname}
+              onChange={this.onChangePatientname}>
               {
-                this.state.users.map(function(user) {
+                this.state.patients.map(function(patient) {
                   return <option 
-                    key={user}
-                    value={user}>{user}
+                    key={patient}
+                    value={patient}>{patient}
                     </option>;
                 })
               }
           </select>
         </div>
+        <div className="form-group">
+          <label>Diagnosis: </label>
+          <input 
+              required
+              type="text" 
+              className="form-control"
+              value={this.state.diagnosis}
+              onChange={this.onChangeDiagnosis}
+              />
+        </div>
         <div className="form-group"> 
           <label>Description: </label>
           <input  type="text"
-              required
               className="form-control"
               value={this.state.description}
               onChange={this.onChangeDescription}
-              />
-        </div>
-        <div className="form-group">
-          <label>Duration (in minutes): </label>
-          <input 
-              type="text" 
-              className="form-control"
-              value={this.state.duration}
-              onChange={this.onChangeDuration}
               />
         </div>
         <div className="form-group">
