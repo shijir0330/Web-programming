@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1f79066-999f-4e83-afd3-795111c59be8" name="Default Changelist" comment="" />
+    <list default="true" id="f1f79066-999f-4e83-afd3-795111c59be8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compiled/photoShare.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/compiled/photoShare.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/userPhotos/userPhotos.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/userPhotos/userPhotos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/userPhotos/userPhotos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/userPhotos/userPhotos.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/webServer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +79,8 @@
       <workItem from="1608115298073" duration="20108000" />
       <workItem from="1608168079352" duration="3021000" />
       <workItem from="1608171164417" duration="4208000" />
+      <workItem from="1608213007975" duration="333000" />
+      <workItem from="1608214108210" duration="3324000" />
     </task>
     <task id="LOCAL-00001" summary="lab 5 done">
       <created>1608114375028</created>

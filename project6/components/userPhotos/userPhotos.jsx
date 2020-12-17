@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import {
-    Typography
+    Typography, Grid
 } from '@material-ui/core';
 import './userPhotos.css';
 
@@ -32,23 +32,31 @@ class UserPhotos extends React.Component {
         return (
             <div variant="body1">
                 {this.state.infos.map((info, index) => (
-                    <div key={info._id}>
-                        {index + 1}. Created Date: {info.date_time}<br/>
-                        <img src={'images/' + info.file_name} className="photo" alt=""/>
-                        <br/>Comments:<br/>
-                        {info.comments ?
-                            info.comments.map(comment => (
-                                <div key={comment._id}>
-                                    <Typography className="comments">
-                                        <a href={'/photo-share.html#/users/' + comment.user._id}
-                                        >{comment.user.first_name + " " + comment.user.last_name}</a><br/>
-                                        date: {comment.date_time}<br/>
-                                        {comment.comment}
-                                    </Typography>
-                                </div>
-                            ))
-                            : <div className="comments">None</div>}
-                    </div>
+                    <Grid key={info._id} container spacing={3}>
+                        <Grid item xs={12}>
+                            <Typography>
+                                {index + 1}. Created Date: {info.date_time.substring(0, 16).replace("T", " ")}
+                            </Typography>
+                        </Grid>
+                        <Grid item sm={4}>
+                            <img src={'images/' + info.file_name} className="photo" alt=""/>
+                        </Grid>
+                        <Grid item sm={8}>
+                            <div>
+                                <Typography>Comments:</Typography>
+                                {info.comments.length ?
+                                    info.comments.map(comment => (
+                                        <Typography key={comment._id} className="comments">
+                                            <a href={'/photo-share.html#/users/' + comment.user._id}
+                                            >{comment.user.first_name + " " + comment.user.last_name}</a>&nbsp;{comment.date_time.substring(0, 16).replace("T", " ")}<br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;{comment.comment}
+                                        </Typography>
+                                    ))
+                                    : <Typography className="comments">None</Typography>
+                                }
+                            </div>
+                        </Grid>
+                    </Grid>
                 ))}
 
                 {/*This should be the UserPhotos view of the PhotoShare app. Since*/}
